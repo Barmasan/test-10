@@ -1,4 +1,4 @@
-let el = document.querySelector('.choose__item_wrapper');
+let el = document.querySelector('.choose__item-wrapper');
     el.addEventListener('click', setTypeSection, false);
 
     function setTypeSection() {
