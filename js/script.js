@@ -17,11 +17,8 @@ let el = document.querySelector('.choose__item-wrapper');
         chooseLabels.classList.add('hide-choose-txt-animation');
 
         setTimeout("chooseContainer.classList.add('disp-none');", 1500);
-        setTimeout("typeNav.classList.remove('disp-none');", 1500);
-        setTimeout("typeNav.classList.add('fade-in-animation');", 1500)
-            +
-            "typeNav.classList.remove('disp-none');" +
-             , 1500);
+        setTimeout("typeNav.classList.add('fade-in-animation');", 1500);
+        setTimeout("typeNav.classList.remove('disp-none');", 1800);
 
     }
 

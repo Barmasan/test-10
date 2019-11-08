@@ -164,25 +164,31 @@ html {
 .choose__wrapper .choose .choose__items .choose__item-wrapper:nth-child(3) .choose__item .choose__label {
   margin-top: -5px;
 }
-.choose__wrapper .choose .choose__items .choose__labels {
+.choose__labels-wrapper {
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.choose__labels-wrapper .choose__labels {
   width: 100%;
   height: 300px;
 }
-.choose__wrapper .choose .choose__items .choose__labels .choose__label {
+.choose__labels-wrapper .choose__labels .choose__label {
   position: absolute;
   width: 300px;
   font-size: 20px;
   text-align: center;
   bottom: 99px;
 }
-.choose__wrapper .choose .choose__items .choose__labels .choose__label:nth-child(1) {
+.choose__labels-wrapper .choose__labels .choose__label:nth-child(1) {
   left: 0;
 }
-.choose__wrapper .choose .choose__items .choose__labels .choose__label:nth-child(2) {
+.choose__labels-wrapper .choose__labels .choose__label:nth-child(2) {
   left: 50%;
   transform: translate(-50%);
 }
-.choose__wrapper .choose .choose__items .choose__labels .choose__label:nth-child(3) {
+.choose__labels-wrapper .choose__labels .choose__label:nth-child(3) {
   right: 0;
 }
 .type__nav {
