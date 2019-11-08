@@ -1,4 +1,4 @@
-
+// BEGIN Fonts
 @font-face {
   font-family: 'DIN Pro Light';
   src: url('../fonts/DINPro-Light.eot');
@@ -8,6 +8,44 @@
   font-weight: normal;
   font-style: normal;
 }
+// END Fonts
+
+// BEGIN Animations
+@keyframes hideChoose {
+  from{
+
+  }
+  to{
+    transform: translateY(-500px);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.fade-in-animation{
+  -webkit-animation: fadeIn 500ms;
+  animation: fadeIn 500ms;
+}
+.hide-choose-animation{
+  transition: 1500ms;
+  transform: translateY(-500px);
+  opacity: 0;
+}
+.hide-choose-txt-animation{
+  transition: 1500ms;
+  transform: translateY(-505px);
+  z-index: -1;
+}
+
+
+
+// END Animations
 
 // BEGIN Utility
 
@@ -22,6 +60,10 @@
   height: 100%;
   margin: auto;
 }
+.disp-none{
+  display: none;
+}
+
 
 // END Utility
 
@@ -82,6 +124,7 @@
     }
     .choose__items{
       height: 300px;
+      position: relative;
       .choose__item-wrapper{
         position: absolute;
         width: 300px;
@@ -104,12 +147,11 @@
           display: inline-block;
           position: absolute;
           left: 50%;
-          top: 50%;
+          top: 43%;
           transform: translate(-50%, -50%);
           text-align: center;
           .choose__icon{
             width: 70px;
-            margin-bottom: 20px;
           }
           .choose__label{
             width: 300px;
@@ -138,16 +180,39 @@
           }
         }
       }
+      .choose__labels{
+        width: 100%;
+        height: 300px;
+        .choose__label{
+          position: absolute;
+          width: 300px;
+          font-size: 20px;
+          text-align: center;
+          bottom: 99px;
+        }
+        .choose__label:nth-child(1){
+          left: 0;
+        }
+        .choose__label:nth-child(2){
+          left: 50%;
+          transform: translate(-50%);
+        }
+        .choose__label:nth-child(3){
+          right: 0;
+        }
+      }
     }
   }
 }
-//END Choose
+// END Choose
 
-//BEGIN Type
+// BEGIN Type
 .type__nav{
+  transition: 2s;
   height: 100px;
   border-bottom: 1px solid #c5c5c2;
   box-sizing: border-box;
+  overflow-y: hidden;
   .type__nav_wrapper{
     position: relative;
     width: 960px;
@@ -196,4 +261,4 @@
 
   }
 }
-//END Type
+// END Type
