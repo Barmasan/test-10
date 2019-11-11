@@ -38,7 +38,7 @@
 }
 .hide-choose-txt-animation {
   transition: 1500ms;
-  transform: translateY(-505px);
+  transform: translate(3px, -519px);
   z-index: -1;
 }
 * body,
@@ -165,21 +165,32 @@ html {
   margin-top: -5px;
 }
 .choose__labels-wrapper {
-  position: relative;
+  position: absolute;
   left: 50%;
-  top: 50%;
+  top: 60%;
   transform: translate(-50%, -50%);
+  width: 960px;
 }
 .choose__labels-wrapper .choose__labels {
   width: 100%;
-  height: 300px;
 }
 .choose__labels-wrapper .choose__labels .choose__label {
   position: absolute;
   width: 300px;
   font-size: 20px;
   text-align: center;
-  bottom: 99px;
+}
+.choose__labels-wrapper .choose__labels .choose__label:hover::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: -38px;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  border: 1px solid #00b0a2;
 }
 .choose__labels-wrapper .choose__labels .choose__label:nth-child(1) {
   left: 0;

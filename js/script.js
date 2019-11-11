@@ -1,7 +1,11 @@
-let el = document.querySelector('.choose__item-wrapper');
-    el.addEventListener('click', setTypeSection, false);
+let chooseItemBlock = document.querySelector('.choose__item-wrapper');
+let chooseItemLabel = document.querySelector('.choose__label');
 
-    function setTypeSection() {
+    chooseItemBlock.addEventListener('click', setTypeSection, false);
+    chooseItemLabel.addEventListener('click', setTypeSection, false);
+
+
+function setTypeSection() {
         let chooseBG = document.querySelector('.choose-bg');
         let typeBG = document.querySelector('.type-bg');
         let chooseContentToHide = document.getElementById('chooseContentToHide');
