@@ -3,6 +3,14 @@ let chooseItemLabel = document.querySelector('.choose__label');
 
     chooseItemBlock.addEventListener('click', setTypeSection, false);
     chooseItemLabel.addEventListener('click', setTypeSection, false);
+    chooseItemLabel.onmouseover = chooseItemLabel.onmouseout = chooseItemBlock.onmouseover = chooseItemBlock.onmouseout = handler;
+    function handler(event) {
+        if(event.type === 'mouseover')
+            document.querySelector('.choose__hover-border').style.display = 'block';
+        if(event.type === 'mouseout')
+            document.querySelector('.choose__hover-border').style.display = 'none';
+    }
+        //document.querySelector('.choose__hover-border').style.display = 'block';
 
 
 function setTypeSection() {
@@ -11,6 +19,7 @@ function setTypeSection() {
         let chooseContentToHide = document.getElementById('chooseContentToHide');
         let chooseHeader = document.querySelector('.choose__header');
         let chooseLabels = document.querySelector('.choose__labels');
+        let chooseLabelsWrapper = document.querySelector('.choose__labels-wrapper');
         let chooseContainer = document.getElementById('chooseContainer');
         let typeNav = document.getElementById('typeNav');
 
@@ -23,6 +32,8 @@ function setTypeSection() {
         setTimeout("chooseContainer.classList.add('disp-none');", 1500);
         setTimeout("typeNav.classList.add('fade-in-animation');", 1500);
         setTimeout("typeNav.classList.remove('disp-none');", 1800);
+        setTimeout("document.querySelector('.choose__labels-wrapper').classList.add('disp-none');", 2000);
 
-    }
+
+}
 

@@ -29,6 +29,7 @@
   to { opacity: 1; }
 }
 .fade-in-animation{
+  display: block;
   -webkit-animation: fadeIn 500ms;
   animation: fadeIn 500ms;
 }
@@ -39,7 +40,7 @@
 }
 .hide-choose-txt-animation{
   transition: 1500ms;
-  transform: translate(3px,-519px);
+  transform: translate(2px,-519px);
   z-index: -1;
 }
 
@@ -131,9 +132,9 @@
         height: 300px;
         border-radius: 50%;
         background-color: #ffffff;
-        &:hover::after {
-          content: '';
-          display: block;
+        cursor: pointer;
+        .choose__hover-border {
+          display: none;
           position: absolute;
           left: 50%;
           top: 50%;
@@ -196,18 +197,7 @@
       width: 300px;
       font-size: 20px;
       text-align: center;
-      &:hover::after {
-        content: '';
-        display: block;
-        position: absolute;
-        left: 50%;
-        top: -38px;
-        transform: translate(-50%, -50%);
-        width: 280px;
-        height: 280px;
-        border-radius: 50%;
-        border: 1px solid #00b0a2;
-      }
+      cursor: pointer;
     }
     .choose__label:nth-child(1){
       left: 0;
